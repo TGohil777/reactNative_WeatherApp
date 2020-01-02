@@ -1,0 +1,54 @@
+import React from 'react';
+import {
+  StyleSheet,
+  View,
+  ImageBackground,
+  Text,
+  KeyboardAvoidingView,
+  Platform,
+  ActivityIndicator,
+  StatusBar
+} from 'react-native';
+
+//Utils
+
+
+//Search Component
+
+//Moment lib
+import moment from 'moment';
+
+export default class App extends React.Component{
+ constructor(props){
+   super(props);
+
+   this.handleDate = this.handleDate.bind(this);
+
+   this.state={
+     loading: false,
+     error: false,
+     location:'',
+     temperature: 0,
+     weather: '',
+     created:'2000-01-01T00:00:00.000000Z'
+   }
+ }
+
+ //Life cycle
+ componentDidMount(){
+   this.handleUpdateLocation('Kiev');
+ }
+
+ handleDate = date => moment(date).format("hh:mm:ss");
+
+ handleUpdateLocation = async city =>{
+   if(!city) return
+
+   const 
+ }
+  render(){
+    return(
+
+    )
+  }
+}
